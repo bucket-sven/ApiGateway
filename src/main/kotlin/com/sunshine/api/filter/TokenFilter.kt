@@ -58,7 +58,7 @@ class TokenFilter : ZuulFilter() {
             }
         }
         token ?: return failedUnauthorized(context)
-        val userToken = redisUtil.fetch(TOKEN_PREFIX + token, 3600) {
+        val userToken = redisUtil.fetchObject(TOKEN_PREFIX + token, 3600) {
             appUserTokenRepository.findByToken(token)
         }
         userToken ?: return failedUnauthorized(context)
