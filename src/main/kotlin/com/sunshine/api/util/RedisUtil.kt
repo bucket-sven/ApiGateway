@@ -3,7 +3,6 @@ package com.sunshine.api.util
 import com.alibaba.fastjson.JSON
 import org.springframework.data.redis.core.RedisOperations
 import org.springframework.data.redis.core.RedisTemplate
-import java.lang.reflect.ParameterizedType
 import java.util.*
 import java.util.concurrent.TimeUnit
 
